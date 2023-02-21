@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.col1 {
+    flex-basis: 50%;
+    flex-grow: 1;
+    background-color: #7BB259;
+}
+
+.col2 {
+    flex-basis: 50%;
+    flex-grow: 1;
+    background-color: #FFF3D7;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 160px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .col1 {
+        flex-basis: 100%;
+        background-color: #FFF3D7;
+        background-repeat: no-repeat;
+        background-attachment: inherit;
+        background-size: 100% 100%;
+    }
+
+    .col2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) and (orientation:landscape){
+    .container {
+        height: 100vw;
+    }
+}

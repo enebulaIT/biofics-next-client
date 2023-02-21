@@ -1,0 +1,33 @@
+.modal {
+    background-color: #F0FFE2;
+    opacity: 0.9;
+    border-radius: 20px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.modalFooter {
+    margin-top: 20px;
+}
+
+.title {
+    color: #845B1B;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+}
+
+.formContainer {
+    width: 750px;
+}
+
+.closeIcon {
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    top: 10px;
+    right: 0;
+}
+
+.closeIcon svg{
+    width: 32px;
+}

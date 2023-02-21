@@ -1,0 +1,36 @@
+.list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex: 1;
+}
+
+.item {
+    width: 100%;
+    margin-bottom: 8px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    display: flex;
+    background: #F5F5F5;
+}
+
+.item:hover {
+    background: #F0FFE2;
+}
+
+.itemText {
+    display: flex;
+}
+
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bottomBar {
+    width: fit-content;
+    margin: 0 auto;
+    color: #845B1B;
+    font-weight: 400;
+}

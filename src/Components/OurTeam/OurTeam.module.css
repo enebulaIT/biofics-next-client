@@ -1,0 +1,66 @@
+.title {
+    font-size: 2em;
+    font-family: 'M PLUS Rounded 1c';
+    font-weight: 800;
+    margin-top: 100px;
+}
+
+.txt_align_center {
+    text-align: center;
+}
+
+.ourTeamWrapper {
+    margin-top: 140px;
+    margin-bottom: 100px;
+}
+
+.teams {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-top: 60px;
+}
+
+.team_img {
+    /* height: 150px;
+    width: 150px; */
+    border-radius: 50px;
+    align-self: center;
+}
+
+.name_title {
+    font-size: 1em;
+    font-family: 'M PLUS Rounded 1c';
+    font-weight: 800;
+    margin-top: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.designation {
+    font-size: 0.8em;
+    font-family: 'M PLUS Rounded 1c';
+    font-weight: 500;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .ourTeamWrapper {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .title {
+        margin-top: 20px;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .team_img{
+        /* height: 135.85px;
+        width: 141px; */
+    }
+    .teams {
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+}

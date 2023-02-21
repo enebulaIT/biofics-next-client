@@ -1,0 +1,30 @@
+.button {
+    position: fixed;
+    /* right: -77px; */
+    right: 0;
+    left: 100%;
+    top: 50%;
+    transition: all 0.2s ease-in 0s;
+    z-index: 9999;
+    cursor: pointer;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg) translateX(-50%);
+    background-color: #ADDA26;
+    width: 120px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+}
+
+
+.button button {
+    transform: rotate(180deg);
+    color: #845B1B;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: none;
+}

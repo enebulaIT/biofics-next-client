@@ -1,0 +1,85 @@
+.featsWrapper {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.number {
+    font-size: 3em;
+    color: #845B1B;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.feat {
+    background-color: #F0FFE2;
+    border-radius: 20px;
+    width: 264px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+    position: relative;
+}
+
+.stat {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.icon img {
+    padding-right: 10px;
+    padding-top: 8px;
+}
+
+.description{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .featsWrapper {
+        margin-top: 0px;
+    }
+    .feat { 
+        width: 185px;
+        height: 185px;
+    }
+    .icon img{
+        height: 37.12px;
+        width: 37.12px;
+    }
+    .number {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    .description{ 
+        font-size: 15px;
+    }
+    .stat{
+        margin-top: 20px;
+    }
+    .feat {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .featsWrapper {
+        margin-top: 60px;
+    }
+    .feat {
+        margin-bottom: 15px;
+    }
+    .number {
+        font-size: 2.5em;
+    }
+}
