@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import api from '../../Api/publicApi';
 import { useRouter } from 'next/router'
-import bgLeavesImage from '../../assets/images/bgLeaves.png';
 import classes from './ProductCategories.module.css';
 import mobileClasses from './Mobile_ProductCategories.module.css';
 import Button from '@mui/material/Button';
 import useAssumedDeviceType from "../../utils/useAssumedDeviceType";
 import appClasses from '../../App.module.css';
+const bgLeavesImage = "/images/bgLeaves.png";
 
 const ProductCategories = (props) => {
     const router = useRouter()

@@ -20,38 +20,40 @@
 
 .navbar a {
     color: #845B1B;
+    font-family: 'Sofia Sans';
     width: fit-content;
-    padding-left: 20px;
-    font-weight: 400;
+    font-weight: 600;
     padding-bottom: 5px;
-    text-align: right;
-    background:
-        linear-gradient(to right,
-            #845B1B 50%,
-            #fff 50%) right bottom no-repeat;
-    background-size: 100% 2px;
-    z-index: 1;
-    position: relative;
+    font-size: 22px;
 }
 
-.navbar a::before {
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #845B1B;
-    z-index: -1;
-    background-size: 100% 2px;
-    height: 2px;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-out;
-    transform-origin: 0 50%;
+.navbar a {
+  position: relative;
+}
+.navbar a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #7BB259;
+  height: 3px;
+}
+.navbar a:hover:after {
+  width: 100%;
 }
 
-.navbar a:hover::before {
-    transform: scaleX(1);
-}
+  .navbar a,
+  .navbar a:after,
+  .navbar a:before {
+    transition: all .5s;
+  }
+  .navbar a:hover {
+    color: #845B1B;
+  }
 
 .userMenu {
     width: 10%;
@@ -61,10 +63,6 @@
 
 .hamburgerMenu {
     display: none;
-}
-
-.logoimg {
-    width: 145px;
 }
 
 @media only screen and (max-width: 600px) {

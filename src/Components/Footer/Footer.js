@@ -1,7 +1,5 @@
 import { Grid } from "@mui/material";
-import Logo from '../../assets/images/Logo.png';
-import Cert1 from '../../assets/images/cert1.png';
-import Cert2 from '../../assets/images/cert2.png';
+import Image from 'next/image';
 import classes from './Footer.module.css';
 import { footerMenu } from "../../nav";
 import Link from 'next/link';
@@ -21,7 +19,7 @@ const Footer = () => {
                     <Grid item xs={12} sm={6} md={3} lg={3}>
                         <div className={classes.logo}>
                             <Link href="/">
-                                <img src={Logo} alt="Logo" />
+                            <Image src="/images/Logo.png" alt="logo" width="145" height="100"/>
                             </Link>
                         </div>
                     </Grid>
@@ -33,11 +31,11 @@ const Footer = () => {
 
                             <div className={classes.certs}>
                                 <div>
-                                    <img src={Cert1} alt="certificate" />
+                                <Image src="/images/cert1.png" alt="logo" width="145" height="100"/>
                                 </div>
 
                                 <div>
-                                    <img src={Cert2} className={classes.bulb} alt="certificate" />
+                                <Image src="/images/cert2.png" alt="logo" width="145" height="100"/>
                                 </div>
                             </div>
                         </div>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import map from '../../assets/images/map.png';
 import classes from './MapSection.module.css';
 import api from '../../Api/publicApi';
 import CaseStudy from './CaseStudy/CaseStudy';
+import Image from 'next/image';
+
 
 const MapSection = (props) => {
     const [selected, setSelected] = useState('guj');
@@ -42,7 +43,7 @@ const MapSection = (props) => {
         <div className={classes.mapContainer}>
 
             <div className={classes.map}>
-                <img src={map} alt="map" useMap='#interactiveMap'  />
+                <img src='/images/map.png' alt="map" useMap='#interactiveMap'  />
                 <map name='interactiveMap'>
                     <div className="dropdown fadeIn">
                         <area 

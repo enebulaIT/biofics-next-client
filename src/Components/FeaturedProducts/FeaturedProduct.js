@@ -3,7 +3,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import Logo from '../../assets/images/Logo.png';
 import classes from './FeaturedProducts.module.css';
 import appClasses from '../../App.module.css';
 import { useRouter } from 'next/router'
@@ -11,7 +10,7 @@ import { useRouter } from 'next/router'
 
 export default function FeaturedProduct(props) {
     const { productData } = props;
-    const productImg = productData?.attributes?.Thumbnail_Image?.data?.attributes?.url || Logo;
+    const productImg = productData?.attributes?.Thumbnail_Image?.data?.attributes?.url || '/images/Logo.png';
     const productalt = productData?.attributes?.Thumbnail_Image?.data?.attributes?.alternativeText;
     const router = useRouter()
 

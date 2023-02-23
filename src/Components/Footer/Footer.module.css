@@ -14,7 +14,7 @@
     z-index: 999;
     top: 0;
     /* height: 100%; */
-    background-image: url(../../assets/images/footerbg.png);
+    background-image: url(/images/footerbg.png);
 }
 
 .footerWrapper {

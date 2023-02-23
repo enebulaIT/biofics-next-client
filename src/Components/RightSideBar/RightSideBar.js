@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { nav } from '../../nav';
 import classes from './RightSideBar.module.css';
-import Logo from '../../assets/images/Logo.png';
+import Image from 'next/image';
 
 const RightSideBar = (props) => {
   const router = useRouter()
@@ -29,7 +29,7 @@ const RightSideBar = (props) => {
         >
           <div className={classes.logo}>
             <Link href="/">
-              <img src={Logo} alt="logo" />
+            <Image src="/images/Logo.png" alt="logo" width="145" height="100"/>
             </Link>
           </div>
           <List className={classes.list}>

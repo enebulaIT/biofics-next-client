@@ -1,12 +1,12 @@
 import { Button, Menu, MenuItem } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { UserIcon, HamburgerIcon } from '../../assets/icons';
-import Logo from '../../assets/images/Logo.png';
 import { nav } from '../../nav';
 import RightSideBar from '../RightSideBar/RightSideBar';
 import classes from './Header.module.css';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Image from 'next/image';
 
 const Header = () => {
 
@@ -54,11 +54,26 @@ const Header = () => {
     }   
 
 
+    useEffect(() => {
+        window.addEventListener('scroll', isSticky);
+        return () => {
+            window.removeEventListener('scroll', isSticky);
+        };
+    });
+
+
+    const isSticky = (e) => {
+        const header = document.querySelector('.header-section');
+        const scrollTop = window.scrollY;
+        scrollTop >= 250 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
+    };
+
+
     return (
-        <div className={classes.header}>
+        <div className={`${classes.header} header-section`}>
             <div className={classes.logo}>
                 <Link href="/">
-                    <img src={Logo} alt="logo" className={classes.logoimg}/>
+                    <Image src="/images/Logo.png" alt="logo" width="145" height="100"/>
                 </Link>
             </div>
 
