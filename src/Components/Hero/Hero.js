@@ -1,5 +1,5 @@
-import BgImage from '../../assets/images/bgBanner.png';
-import bgLeavesImage from '../../assets/images/bgLeaves.png';
+import BgImage from '../../../assets/images/bgBanner.png';
+import bgLeavesImage from '../../../assets/images/bgLeaves.png';
 import { useEffect, useState } from 'react';
 import classes from './Hero.module.css';
 import api from '../../Api/publicApi';

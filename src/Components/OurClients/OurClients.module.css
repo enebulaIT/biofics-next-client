@@ -1,0 +1,43 @@
+.clients {
+    padding-top: 40px;
+}
+
+.clientWrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.item img{
+    width: fit-content;
+    margin: 0 auto;
+    transition: all 0.2s ease-out;
+    transform: scale(0.65);
+}
+
+.item img:hover {
+    transform: scale(1);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .clients {
+        padding-top: 20px;
+    }
+
+    .clientWrapper {
+        margin-top: 30px;
+    }
+
+    .item img{
+        width: 60%;
+        height: 150px;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .item img{
+        width: fit-content;
+    }
+}

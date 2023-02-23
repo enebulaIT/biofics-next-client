@@ -1,0 +1,113 @@
+.oneliner {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #72786C;
+    font-weight: 400;
+    /* text-align: center; */
+}
+
+.title {
+    margin: 0 !important;
+}
+
+.majors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.cities, .majorClients {
+    font-size: 1.25em;
+    color: #72786C;
+    font-weight: 400;
+    width: 45%;
+    margin-bottom: 40px;
+}
+
+.icon svg{
+    font-size: 16px;
+    width: 62px;
+    height: 62px;
+    fill: #7BB259;
+    margin-right: 10px;
+}
+
+.stats {
+    margin-top: 40px;
+    width: 30vw;
+}
+
+.statsWrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.number {
+    color: #845B1B;
+    font-size: 2em;
+}
+
+.text {
+    width: 75%;
+    font-size: 0.9em;
+    color: #7BB259;
+}
+
+.title > span {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.selectedState {
+    font-size: 1.2em;
+}
+
+.selectedState span {
+    font-size: 1.2em;
+}
+
+
+.notselectedState {
+    font-size: .65em;
+    color: #845B1B;
+    font-weight: 300;
+}
+
+.notselectedState span {
+    font-size: .7em;
+}
+
+.separator {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .cities, .majorClients {
+        width: 100%;
+    }
+    
+    .stats {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .cities, .majorClients {
+        width: 100%;
+    }
+
+    .icon svg{
+        width: 40px;
+    }
+
+    .number {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,32 @@
+.problems {
+    margin-top: 50px;
+    background-color: #F5F5F5;
+}
+
+.clients {
+    background-color: #F5F5F5;
+    margin-bottom: 100px;
+}
+
+.videoplayer {
+    margin-bottom: 100px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .clients {
+        background-color: #FFFFFF;
+        margin-bottom: 50px;
+    }
+
+    .problems {
+        margin-top: 30px;
+        background-color: #FFFFFF;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    .clients {
+        margin-bottom: 50px;
+    }
+}

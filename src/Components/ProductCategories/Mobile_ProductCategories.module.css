@@ -1,0 +1,45 @@
+.singleProduct {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 183%;
+}
+
+.imageContent {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.imageContent img {
+    max-width: 100%;
+}
+
+.singleProduct.right {
+    /* background-position: 105%; */
+    background-color: #F0FFE2;
+}
+
+.singleProduct.left {
+    background-color: #FFF3D7;
+    /* background-position: -10%; */
+}
+
+.contentWrapper {
+    padding: 5%
+}
+
+.imageContent {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.description {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.contentWrapper button{
+    display: block;
+    margin: 0 auto;
+}
