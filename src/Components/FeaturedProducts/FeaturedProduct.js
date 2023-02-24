@@ -30,7 +30,7 @@ export default function FeaturedProduct(props) {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button className={appClasses.btn1} onClick={() => router.push(`/products/product-detail/${productData.id}`)}>
+                <Button className={appClasses.btn1} onClick={() => router.push(`/product-details/${productData.id}`)}>
                     Details
                 </Button>
             </CardActions>

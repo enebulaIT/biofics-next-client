@@ -32,11 +32,11 @@ const Banner = (props) => {
             props.setLoading(true);
             try {
                 const response = await api.get(`/api/banners?populate=*`);
-                const bannerData = response?.data?.data || [] ;
+                const bannerData = response?.data?.data || [];
                 const parsedBannerData = [];
-                
+
                 bannerData.forEach(banner => {
-                    if( banner.attributes.BannerSize === assumedDeviceType) {
+                    if (banner.attributes.BannerSize === assumedDeviceType) {
                         parsedBannerData.push(banner);
                     }
                 });
@@ -51,17 +51,31 @@ const Banner = (props) => {
     }, [assumedDeviceType]);
 
     const handleClick = (event, link) => {
-        if(link && link?.length) {
+        if (link && link?.length) {
             router.push(link);
         }
     }
+
+    const mouseDownCoords = e => {
+        window.checkForDrag = e.clientX;
+    };
+
+    const clickOrDrag = e => {
+        const mouseUp = e.clientX;
+        if (
+            mouseUp < window.checkForDrag + 6 &&
+            mouseUp > window.checkForDrag - 6
+        ) {
+            setBackground(randomcolor());
+        }
+    };
 
     const generateBannerItems = () => {
         const elements = [];
 
         bannerData.forEach(banner => {
             elements.push(
-                <div className={classes.item} key={banner.id} onClick = {(event) => handleClick(event, banner?.attributes?.LinkToPage)}>
+                <div className={classes.item} key={banner.id} onClick={(event) => handleClick(event, banner?.attributes?.LinkToPage)}>
                     <img src={`${banner?.attributes?.BannerImage?.data?.attributes?.url}`} alt="banner" />
                 </div>
             )
@@ -72,7 +86,7 @@ const Banner = (props) => {
     if (bannerData.length === 0) return null;
 
     return (
-        <div className = "banner">
+        <div className="banner">
             <Slider {...settings}>
                 {generateBannerItems()}
             </Slider>

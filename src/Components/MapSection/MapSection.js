@@ -44,7 +44,7 @@ const MapSection = (props) => {
 
             <div className={classes.map}>
                 <img src='/images/map.png' alt="map" useMap='#interactiveMap'  />
-                <map name='interactiveMap'>
+                {/* <map name='interactiveMap'>
                     <div className="dropdown fadeIn">
                         <area 
                             className={`${classes.jk} ${classes.area} ${selected === 'jk' ? classes.selected : ''}`} 
@@ -87,7 +87,7 @@ const MapSection = (props) => {
                             onClick={() => handleMarkerClicked('up')} 
                             alt="state" />
                     </div>
-                </map>
+                </map> */}
             </div>
 
             <div className={classes.caseStudy}>

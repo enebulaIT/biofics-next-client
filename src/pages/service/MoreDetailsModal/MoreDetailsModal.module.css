@@ -1,0 +1,20 @@
+.modal {
+    background-color: #F0FFE2;
+    opacity: 0.9;
+    border-radius: 20px;
+}
+
+.modalFooter {
+    margin-top: 20px;
+}
+
+.description {
+    color: #845B1B;
+    font-weight: 400;
+}
+
+.title {
+    color: #845B1B;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+}

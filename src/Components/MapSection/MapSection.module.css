@@ -1,51 +1,51 @@
 .jk {
-    left: 174px;
-    top: 124px;
+    left: 9%;
+    top: 15%;
 }
 
 .raj {
-    left: 160px;
-    top: 314px;
+    left: 7%;
+    top: 34%;
 }
 
 .guj {
-    left: 93px;
-    top: 419px;
+    left: 5%;
+    top: 45%;
 }
 
 .mp {
-    left: 252px;
-    top: 409px;
+    left: 12%;
+    top: 45%;
 }
 
 .mh {
-    left: 189px;
-    top: 517px;
+    left: 10%;
+    top: 56%;
 }
 
 .ka {
-    left: 189px;
-    top: 643px;
+    left: 9%;
+    top: 71%;
 }
 
 .teln {
-    left: 269px;
-    top: 570px;
+    left: 14%;
+    top: 61%;
 }
 
 .od {
-    left: 409px;
-    top: 496px;
+    left: 20%;
+    top: 54%;
 }
 
 .wb {
-    left: 491px;
-    top: 401px;
+    left: 24%;
+    top: 45%;
 }
 
 .up {
-    left: 318px;
-    top: 315px;
+    left: 16%;
+    top: 35%;
 }
 
 .area {
@@ -64,7 +64,7 @@
 }
 
 .selected {
-    transform: scale(1.5);
+    /* transform: scale(1.5); */
     transform-origin: bottom;
 }
 
@@ -72,6 +72,7 @@
     position: relative;
     display: flex;
     width: 100%;
+    margin-top: 100px;
 }
 
 .map {
@@ -84,8 +85,8 @@
 
 .caseStudy {
     width: 100%;
-    margin-left: 60px;
-    margin-top: 50px;
+    /* margin-left: 60px;
+    margin-top: 50px; */
 }
 
 

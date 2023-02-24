@@ -1,0 +1,19 @@
+.container {
+    margin: 0px 69px;
+}
+
+.product_list {
+    margin-bottom: 65px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){ 
+    .container {
+        margin: 0px 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0px 20px;
+    }
+}

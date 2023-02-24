@@ -11,7 +11,7 @@ const nav = [
     },
     {
         id: "2",
-        to: "/products",
+        to: "/product-categories",
         label: "Products"
     },
     {

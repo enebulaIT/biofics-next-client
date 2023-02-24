@@ -6,9 +6,9 @@ import Form from './Form/Form';
 import { Button } from '@mui/material';
 import api from '../../Api/publicApi';
 import { toast } from 'react-toastify';
-import { CloseIcon } from '../../../assets/icons';
 import classes from './GetQuoteModal.module.css';
 import appClasses from '../../App.module.css';
+import { CloseIcon } from '../../assets/icons';
 
 const initialFormState = {
     Name: "",

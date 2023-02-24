@@ -19,7 +19,7 @@ const Footer = () => {
                     <Grid item xs={12} sm={6} md={3} lg={3}>
                         <div className={classes.logo}>
                             <Link href="/">
-                            <Image src="/images/Logo.png" alt="logo" width="145" height="100"/>
+                            <Image src="/images/Logo.png" alt="logo" width="200" height="180"/>
                             </Link>
                         </div>
                     </Grid>
@@ -31,11 +31,11 @@ const Footer = () => {
 
                             <div className={classes.certs}>
                                 <div>
-                                <Image src="/images/cert1.png" alt="logo" width="145" height="100"/>
+                                <Image src="/images/cert1.png" alt="logo" width="145" height="50"/>
                                 </div>
 
                                 <div>
-                                <Image src="/images/cert2.png" alt="logo" width="145" height="100"/>
+                                <Image src="/images/cert2.png" alt="logo" width="80" height="100"/>
                                 </div>
                             </div>
                         </div>

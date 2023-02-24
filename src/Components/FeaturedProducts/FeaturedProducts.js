@@ -97,7 +97,7 @@ const FeaturedProducts = (props) => {
 
         <div className={commonClasses.sectionBtn}>
 
-      <Button onClick={() => router.push('/products')} className={`${commonClasses.linkBtn}`}>Explore all</Button>
+      <Button onClick={() => router.push('/product-categories')} className={`${commonClasses.linkBtn}`}>Explore all</Button>
         </div>
     </div>
   );

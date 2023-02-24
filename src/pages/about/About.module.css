@@ -1,0 +1,108 @@
+.container {
+    /* background-color: yellow; */
+}
+
+.aboutPage {
+    margin: 0px 69px;
+}
+
+.whoweare {
+    display: flex;
+    flex-direction: row;
+}
+
+.title {
+    font-size: 2em;
+    font-family: 'M PLUS Rounded 1c';
+    font-weight: 800;
+    margin-top: 100px;
+    color: #845B1B;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.txt_align_center {
+    text-align: center;
+}
+
+.attributes {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.attributes_txt {
+    width: 80%;
+    text-align: center;
+}
+
+.image {
+    /* width: 25vw; */
+    /* height: 400px; */
+    /* background-color: red; */
+}
+
+.text p {
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutPage {
+        margin: 0px 20px;
+    }
+
+    .title {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .whoweare {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .text p {
+        display: flex;
+        margin-top: 0px;
+    }
+
+    .image img {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){
+    .aboutPage {
+        margin: 0px 30px;
+    }
+    .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .image img {
+        /* width: 45vw;
+        height: 45vw; */
+    }
+
+    /* .text{
+        margin-right: 50px;
+    } */
+
+    .whoweare {
+        flex-direction: column;
+    }
+}

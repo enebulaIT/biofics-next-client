@@ -82,7 +82,7 @@ const ProductCategories = (props) => {
     }
 
     const handleEnquire = (id) => {
-        router.push('/products/' + id);
+        router.push('/product-category/' + id);
     }
 
     if (productData?.length === 0) return null;

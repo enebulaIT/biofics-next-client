@@ -1,0 +1,234 @@
+.container {
+    margin: 0px 69px;
+}
+
+.service_list {
+    margin-bottom: 65px;
+}
+
+.container {
+    margin: 0px 69px;
+}
+
+.product_list {
+    margin-bottom: 65px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){ 
+    .container {
+        margin: 0px 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0px 20px;
+    }
+}
+
+.products {
+    margin-top: 150px;
+}
+
+.singleProduct {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    align-items: center;
+    height: 448px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.singleProduct.right {
+    background-position: 105%;
+    background-color: #F0FFE2;
+}
+
+.singleProduct.left {
+    background-color: #FFF3D7;
+    flex-direction: row-reverse;
+    background-position: -10%;
+}
+
+.textContent {
+    width: 30%;
+}
+
+.singleProduct.right .textContent {
+    margin-left: 5%;
+}
+
+.singleProduct.right .imageContent {
+    margin-right: 5%;
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.singleProduct.left .textContent {
+    margin-right: 5%;
+}
+
+.singleProduct.left .imageContent {
+    margin-left: 5%;
+}
+
+.imageContent img {
+    width: 400px;
+}
+
+.title {
+    font-size: 3em;
+    color: #845B1B;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.description {
+    color: #845B1B;
+    margin-bottom: 30px;
+}
+
+.imageWrapper {
+    background-color: #393939;
+    width: 362px;
+    height: 362px;
+    border-radius: 40px;
+    position: relative;
+}
+
+.imageWrapper img {
+    display: block;
+    position: absolute;
+    top: 18%;
+    left: 17%;
+}
+
+button.action {
+    background-color: #ADDA26;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #845B1B;
+    font-weight: 600;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+    text-transform: none;
+}
+
+button.action:hover {
+    background-color: #ADDA26;
+    color: #845B1B;
+    box-shadow: 4px 4px 6px rgb(0 0 0 / 25%);
+}
+
+button.viewAll {
+    color: #845B1B;
+    width: fit-content;
+    padding-left: 20px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    text-align: right;
+    background:
+        linear-gradient(to right,
+            #845B1B 50%,
+            #fff 50%) right bottom no-repeat;
+    background-size: 100% 2px;
+    text-transform: none;
+    font-size: 1.5em;
+    margin: 0 auto;
+    display: block;
+}
+
+button.viewAll:hover {
+    background-color: #fff;
+}
+
+.productsWrapper {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .products {
+        margin-top: 50px;
+    }
+    .textContent {
+        width: 38%;
+    }
+    .title {
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    .description {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    .singleProduct {
+        height: 229px;
+        border-radius: 14px;
+    }
+
+    .imageWrapper {
+        height: 166px;
+        width: 166px;
+        border-radius: 11px;
+    }
+
+    .imageWrapper img {
+        height: 110px;
+        width: 110px;
+    }
+
+    button.action {
+        height: 27px;
+        width: 90px;
+        font-size: 9px;
+        padding: 0px 0px;
+        border-radius: 7px;
+    }
+
+    button.viewAll{
+        font-size: 11px;
+        padding-left: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    .products {
+        margin-top: 60px;
+    }
+    .title {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+    .singleProduct {
+        border-radius: 18px;
+    }
+
+    .imageWrapper {
+        border-radius: 14px;
+    }
+
+    .textContent {
+        width: 35%;
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 1024px){ 
+    .container {
+        margin: 0px 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 0px 20px;
+    }
+}
