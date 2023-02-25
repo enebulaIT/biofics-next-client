@@ -27,5 +27,8 @@
     "slick-carousel": "^1.8.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1"
+  },
+  "engines": {
+    "node": ">=15 <17"
   }
 }
