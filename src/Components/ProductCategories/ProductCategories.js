@@ -49,7 +49,7 @@ const ProductCategories = (props) => {
                             <div className={classes.description}>
                                 {product.attributes.Description}
                             </div>
-                            <Button className={appClasses.btn1} disableRipple onClick={() => handleEnquire(product?.id)}>Read More</Button>
+                            <Button className={appClasses.btn1} disableRipple onClick={() => handleEnquire(product?.id)}>View Product</Button>
                         </div>
 
                         <div className={classes.imageContent}>
@@ -72,7 +72,7 @@ const ProductCategories = (props) => {
                                 <span className={mobileClasses.description}>
                                     {product.attributes.Description}
                                 </span>
-                                <Button className={appClasses.btn1} disableRipple onClick={() => handleEnquire(product?.id)}>Read More</Button>
+                                <Button className={appClasses.btn1} disableRipple onClick={() => handleEnquire(product?.id)}>View Product</Button>
                             </div>
                     </div >
                 )

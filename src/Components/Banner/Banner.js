@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import classes from './Banner.module.css';
 import useAssumedDeviceType from '../../utils/useAssumedDeviceType';
 import { useRouter } from 'next/router'
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 
 const settings = {
@@ -50,7 +52,7 @@ const Banner = (props) => {
         fetchData();
     }, [assumedDeviceType]);
 
-    const handleClick = (event, link) => {
+    const handleClick = (link) => {
         if (link && link?.length) {
             router.push(link);
         }
@@ -60,13 +62,13 @@ const Banner = (props) => {
         window.checkForDrag = e.clientX;
     };
 
-    const clickOrDrag = e => {
+    const clickOrDrag = (e, link) => {
         const mouseUp = e.clientX;
         if (
             mouseUp < window.checkForDrag + 6 &&
             mouseUp > window.checkForDrag - 6
         ) {
-            setBackground(randomcolor());
+            handleClick(link);
         }
     };
 
@@ -75,7 +77,11 @@ const Banner = (props) => {
 
         bannerData.forEach(banner => {
             elements.push(
-                <div className={classes.item} key={banner.id} onClick={(event) => handleClick(event, banner?.attributes?.LinkToPage)}>
+                // <div className={classes.item} key={banner.id} onClick={(event) => handleClick(event, banner?.attributes?.LinkToPage)}>
+                <div 
+                    className={classes.item} key={banner.id} 
+                    onMouseDown={e => mouseDownCoords(e)}
+                    onMouseUp={e => clickOrDrag(e, banner?.attributes?.LinkToPage)}>
                     <img src={`${banner?.attributes?.BannerImage?.data?.attributes?.url}`} alt="banner" />
                 </div>
             )
@@ -83,10 +89,18 @@ const Banner = (props) => {
         return elements;
     }
 
-    if (bannerData.length === 0) return null;
+    if (bannerData.length === 0) {
+        return (
+            <div className={`${classes.banner}`}>
+                <Box className={classes.loader} sx={{ display: 'flex' }}>
+                    <CircularProgress />
+                </Box>
+            </div>
+        )
+    }
 
     return (
-        <div className="banner">
+        <div className={`banner ${classes.banner}`}>
             <Slider {...settings}>
                 {generateBannerItems()}
             </Slider>

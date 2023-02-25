@@ -5,18 +5,33 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import classes from './Testimonials.module.css';
 import useWindowDimensions from '../../utils/windowDimention';
+import commonClasses from '../../App.module.css';
+
 
 const Testimonials = (props) => {
   const [testimonailsData, setTestimonialsData] = useState([]);
   const { width } = useWindowDimensions();
-  const slidesToShow = width <= 1024 ? 1 : 2
+  const [slides, setSlides] = useState(0);
+  
+  useEffect(() => {
+    let slides;
+    if(width <= 600) {
+      slides = 1; 
+    } else if(width > 600 && width <= 1200) {
+      slides = 2; 
+    } else if(width > 1200) {
+      slides = 3; 
+    }
+    setSlides(slides)
 
+  }, [width])
+  
   const settings = {
     dots: false,
-    arrows: width <= 600 ? false : true,
+    arrows: true,
     infinite: true,
     speed: 500,
-    slidesToShow: slidesToShow,
+    slidesToShow: slides,
     slidesToScroll: 1,
   };
 
@@ -65,10 +80,7 @@ const Testimonials = (props) => {
 
   return (
     <div className={classes.testimonails}>
-      <div className={classes.textSection}>
-        What they have
-        <br /> to Say!
-      </div>
+      <div className={commonClasses.pageTitle}>What they say</div>
 
       <div className={classes.testimonailsSection}>
         <Slider {...settings}>{generateTestimonialsItems()}</Slider>

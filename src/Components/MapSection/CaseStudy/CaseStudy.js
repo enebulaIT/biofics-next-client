@@ -8,23 +8,20 @@ const CaseStudy = (props) => {
     const { selectedStateData } = props;
 
     const getStateNames = () => {
-       const HTML = [<span key = "0" className={classes.selectedState}>{selectedStateData?.StateName} <span key = "0" className={classes.separator}> | </span> </span>];
-       Object.keys(props.stateData).forEach((state, index) => {
+        const HTML = [<span key="0" className={`${classes.selectedState} ${classes.stateName}`}>{selectedStateData?.StateName} </span>];
+
+        Object.keys(props.stateData).forEach((state, index) => {
             const stateName = props.stateData[state]?.attributes?.StateName;
             const stateKey = props.stateData[state]?.attributes?.StateKey;
 
-            if(stateName !== selectedStateData?.StateName) {
-                if(index !== Object.keys(props.stateData)?.length - 1) {
-                    HTML.push(
-                        <span 
-                            className={classes.notselectedState} 
-                            key = {stateKey} 
-                            onClick={() => props.setSelected(stateKey)}>
-                                {stateName}  <span className={classes.separator}> | </span> 
-                        </span>) 
-                } else {
-                    HTML.push(<span className={classes.notselectedState} key = {stateKey} onClick={() => props.setSelected(stateKey)}>{stateName}</span>) 
-                }
+            if (stateName !== selectedStateData?.StateName) {
+                HTML.push(
+                    <span
+                        className={`${classes.notselectedState} ${classes.stateName}`}
+                        key={stateKey}
+                        onClick={() => props.setSelected(stateKey)}>
+                        {stateName}
+                    </span>)
             }
         })
         return HTML

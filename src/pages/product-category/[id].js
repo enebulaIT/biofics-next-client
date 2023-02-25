@@ -64,7 +64,6 @@ const Products = () => {
                         productData={product} 
                         productIndex={index} />
                 );
-                console.log('product', product)
             }
         });
 

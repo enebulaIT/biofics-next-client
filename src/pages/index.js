@@ -39,12 +39,19 @@ export default function Home() {
 
             <section className={`${classes.clients}`}>
                 <OurClients setLoading={setLoading} />
+            </section>
+
+            <section className={`${classes.testimonials}`}>
                 <Testimonials setLoading={setLoading} />
+            </section>
+
+            <section className={`${classes.feats}`}>
+                <FeatsAcheived setLoading={setLoading} />
             </section>
 
 
             <section className={`${classes.videoplayer} ${commonClasses.container}`}>
-                <FeatsAcheived setLoading={setLoading} />
+                
                 <VideoPlayer/>
             </section>
             

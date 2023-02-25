@@ -1,9 +1,5 @@
 .testimonails {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 70px;
-    padding-bottom: 60px;
+    margin-top: 40px;
 }
 
 .textSection {
@@ -14,7 +10,9 @@
 }
 
 .testimonailsSection {
-    width: 60%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
 }
 
 .testimonial {
@@ -48,9 +46,7 @@
 
 @media only screen and (max-width: 600px) {
     .testimonails {
-        margin-top: 0px;
-        flex-direction: column;
-        padding: 0 35px;
+        margin-top: 20px;
     }
 
     .textSection {
@@ -61,6 +57,7 @@
 
     .testimonailsSection {
         width: 100%;
+        margin-top: 30px;
     }
 
     .testimonial {

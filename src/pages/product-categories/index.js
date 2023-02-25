@@ -48,7 +48,7 @@ const MainProductsPage = () => {
                         </div>
                         <div className={classes.description} dangerouslySetInnerHTML = {{__html: product.attributes.Description}}>
                         </div>
-                        <Button className={classes.action} disableRipple onClick={() => handleEnquire(product?.id)}>Read More</Button>
+                        <Button className={classes.action} disableRipple onClick={() => handleEnquire(product?.id)}>View Product</Button>
                     </div>
 
                     <div className={classes.imageContent}>
