@@ -233,6 +233,9 @@
           url('./assets/fonts/sofia-sans/sofia-sans-v13-latin-900.svg#SofiaSans') format('svg'); /* Legacy iOS */
    }
 
+   /* Primary color #7BB259; */
+   /* Secondary color #845B1B; */
+
 
 * {
      font-size: 100%;

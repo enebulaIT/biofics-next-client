@@ -29,8 +29,13 @@ const style = {
 
 export default function GetQuoteModal(props) {
     const { open, handleClose } = props;
+    const [modalOpen, setModalOpen] = React.useState(false);
     const [formData, setFormData] = React.useState(initialFormState);
     const [formHasError, setFormHasError] = React.useState(false);
+    
+    React.useEffect(() => {
+        setModalOpen(open);
+    }, [open]);
 
     const validateData = () => {
         if (formData.Name === '' || formData.Message === '' || formData.Email === "") {
@@ -69,7 +74,7 @@ export default function GetQuoteModal(props) {
     return (
         <div>
             <Modal
-                open={open}
+                open={modalOpen}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"

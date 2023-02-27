@@ -74,7 +74,6 @@ const FeatsAcheived = (props) => {
 
                     const currentFeatsData = [...featsData];
                     const i = currentFeatsData.findIndex(feat => feat.id === data.id);
-                    console.log('tester', i)
                     currentFeatsData[i].attributes.Value = Number(currentFeatsData[i].attributes.Value) + getRandomArbitrary(currentFeatsData[i].attributes.IncreaseByValue - 2, currentFeatsData[i].attributes.IncreaseByValue)
 
                     setFeatsData(currentFeatsData)
@@ -101,7 +100,7 @@ const FeatsAcheived = (props) => {
 
     const getIcon = (id) => {
         const foundFeat = featsData?.find(feat => feat.id === id);
-        const uploadedImgUrl = foundFeat?.attributes?.Icon?.data?.attributes?.url
+        const uploadedImgUrl = foundFeat?.attributes?.Icon?.data?.attributes?.url;
         if (uploadedImgUrl && uploadedImgUrl.length) {
             return <Image src={uploadedImgUrl} alt="logo" width="32" height="32" />
         }
@@ -135,7 +134,7 @@ const FeatsAcheived = (props) => {
                     <Grid item md={4} xs={12}>
                         <div className={classes.feat}>
                             <div className={classes.icon}>
-                                {getIcon(featsData[1]?.id)}
+                                {getIcon(featsData[2]?.id)}
                             </div>
 
                             {getFeat(featsData[2]?.id)}

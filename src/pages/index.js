@@ -11,17 +11,44 @@ import OurClients from '@/Components/OurClients/OurClients'
 import Testimonials from '@/Components/Testimonials/Testimonials'
 import FeatsAcheived from '@/Components/FeatsAcheived/FeatsAcheived'
 import VideoPlayer from '@/Components/VideoPlayer/VideoPlayer'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import GetQuoteModal from '@/Components/GetQuoteModal/GetQuoteModal';
+import Cookies from 'universal-cookie';
+
 import classes from './index.module.css';
 import commonClasses from '../App.module.css'
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
+  const cookies = new Cookies();
+
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  useEffect(() => {
+
+    if(localStorage) {
+        if(!cookies.get('hasPopOpenedOnce')) {
+            setTimeout(() => {
+              handleOpen(true)
+              cookies.set('hasPopOpenedOnce', true, {path: '/', expires: new Date(Date.now()+86400)});
+            }, 2000)
+        }
+    }
+  }, [loading])
+
 
     return (
         <div className={`${classes.home}`}>
+            <Head>
+        <title>My page title</title>
+      </Head>
             {loading && <PageLoader />}
 
             <Banner setLoading={setLoading} />
@@ -54,7 +81,8 @@ export default function Home() {
                 
                 <VideoPlayer/>
             </section>
-            
+            <GetQuoteModal open={open} handleClose={handleClose} />
+
         </div>
     )
 }
